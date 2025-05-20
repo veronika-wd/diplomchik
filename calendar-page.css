@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+
+/* Шаблонные компоненты */
+button {
+    padding: 10px;
+    background-color: purple;
+    color: aliceblue;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+button:hover {
+    background-color: rgb(151, 42, 151);
+    box-shadow: 5px 5px 20px grey;
+}
+
+/* Шапка и подвал сайта */
+header, footer {
+    background-color: rgb(127, 61, 158);
+    height: auto;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+nav a {
+    color: aliceblue;
+    opacity: 70%;
+    text-decoration: none;
+    transition: .4s;
+    padding: 5px;
+}
+
+nav a:hover {
+    letter-spacing: 1.5px;
+    opacity: 100%;
+}
+
+nav a:nth-child(2) {
+    font-weight: 600;
+    opacity: 100%;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Распределение тела страницы на блоки */
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+/* Календарь */
+#calendar {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Стили для FullCalendar */
+.fc {
+    font-family: Montserrat, sans-serif;
+}
+
+.fc-toolbar-title {
+    font-weight: 600;
+    color: #333;
+}
+
+.fc-col-header-cell-cushion {
+    color: rgb(127, 61, 158);
+    font-weight: 600;
+}
+
+.fc-daygrid-day-number {
+    color: #333;
+}
+
+.fc-event {
+    background-color: rgb(127, 61, 158);
+    border: none;
+    padding: 2px 4px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.fc-event:hover {
+    background-color: rgb(151, 42, 151);
+}
+
+.fc-button {
+    background-color: rgb(127, 61, 158) !important;
+    border: none !important;
+    transition: .4s;
+}
+
+.fc-button:hover {
+    background-color: rgb(151, 42, 151) !important;
+}
+
+.fc-button-active {
+    background-color: rgb(151, 42, 151) !important;
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #333;
+}
+
+/* Форма добавления события */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.submit-btn {
+    flex: 1;
+    padding: 10px;
+}
+
+.delete-btn {
+    flex: 1;
+    padding: 10px;
+    background-color: #ff4444 !important;
+    display: none;
+}
+
+.delete-btn:hover {
+    background-color: #cc0000 !important;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Медиазапросы */
+@media (max-width: 768px) {
+    .fc-toolbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .fc-toolbar-title {
+        font-size: 1.2em;
+    }
+    
+    .fc-header-toolbar .fc-toolbar-chunk {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .modal-content {
+        margin: 20% auto;
+    }
+    
+    .floating-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) {
+    main {
+        padding: 35px;
+    }
+}

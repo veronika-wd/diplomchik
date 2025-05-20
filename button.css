@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+button{
+    background-color: rgb(177, 11, 177);
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 550;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.dis-but{
+    background-color: rgba(131, 16, 131, 0.637);
+}
+
+.common-but:hover{
+    background-color:rgb(105, 17, 105);
+}
+
+/* стили для тумблера */
+
+.tum-container{
+    margin: 20px;
+}
+
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider{
+    position: absolute;
+    cursor: pointer;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider::before{
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 25px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    transition: .4s;
+}
+
+input:checked + .slider{
+    background-color: rgb(177, 11, 177);
+}
+
+input:focus + .slider{
+    box-shadow: 0 0 1px grey;
+}
+input:checked + .slider::before{
+    transform: translateX(26px);
+}
+
+.round{
+    border-radius: 34px;
+}
+
+.round::before{
+    border-radius: 50%;
+}

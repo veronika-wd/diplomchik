@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Главная</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">Личный кабинет</a>
+            <a href="#">Главная</a>
+            <a href="#">Календарь</a>
+            <a href="#">Расписание</a>
+            <a href="#">База данных</a>
+        </nav>
+    </header>
+    <main>
+        <aside id="sidebar">
+            <aside id="massages-block">
+                <h2>Объявления</h2>
+                <div class="massage">
+                    <p>
+                        Доброе утро, имеются изменения в расписании 25.04.2025.
+                    </p>
+                </div>
+                <div class="massage">
+                    <p>
+                        Доброе утро, имеются изменения в расписании 25.04.2025.
+                    </p>
+                </div>
+                <button>Открыть список объявлений</button>
+            </aside>
+            <div id="calendar-container">
+                <h3 id="calendar-month-year"></h3>
+                <div id="calendar-grid"></div>
+              </div>
+            
+        </aside>
+        <section id="main-bar">
+            <aside id="today-events-block">
+                <h2>События на сегодня</h2>
+                <p>День театра</p>
+                <button>Перейти к календарю</button>
+            </aside>
+            <aside id="shedule-block">
+                <div class="header-shedule">
+                    <h2>Расписание на сегодня</h2>
+                    <button>Перейти к общему расписанию</button>
+                </div>
+                <div class="shedule-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>5 класс</td>
+                                <td>6 класс</td>
+                                <td>7 класс</td>
+                                <td>8 класс</td>
+                                <td>9 класс</td>
+                                <td>10 класс</td>
+                                <td>11 класс</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="users-lesson">Русский язык</td>
+                                <td>Математика</td>
+                                <td>Литература</td>
+                                <td>Алгебра</td>
+                                <td>Русский язык</td>
+                                <td>Литература</td>
+                                <td>Биология</td>
+                            </tr>
+                            <tr>
+                                <td class="users-lesson">Русский язык</td>
+                                <td>Математика</td>
+                                <td>Литература</td>
+                                <td>Алгебра</td>
+                                <td>Русский язык</td>
+                                <td>Литература</td>
+                                <td>Биология</td>
+                            </tr>
+                            <tr>
+                                <td class="users-lesson">Русский язык</td>
+                                <td>Математика</td>
+                                <td>Литература</td>
+                                <td>Алгебра</td>
+                                <td>Русский язык</td>
+                                <td>Литература</td>
+                                <td>Биология</td>
+                            </tr>
+                            <tr>
+                                <td>Математика</td>
+                                <td>Литература</td>
+                                <td>Алгебра</td>
+                                <td class="users-lesson">Русский язык</td>
+                                <td>Русский язык</td>
+                                <td>Литература</td>
+                                <td>Биология</td>
+                            </tr>
+                            <tr>
+                                <td class="users-lesson">Русский язык</td>
+                                <td>Математика</td>
+                                <td>Литература</td>
+                                <td>Алгебра</td>
+                                <td>Русский язык</td>
+                                <td>Литература</td>
+                                <td>Биология</td>
+                            </tr>
+                            <tr>
+                                <td>Математика</td>
+                                <td class="users-lesson">Русский язык</td>
+                                <td>Литература</td>
+                                <td>Алгебра</td>
+                                <td>Русский язык</td>
+                                <td>Литература</td>
+                                <td>Биология</td>
+                            </tr>
+                            <tr>
+                                <td class="users-lesson">Русский язык</td>
+                                <td>Математика</td>
+                                <td>Литература</td>
+                                <td>Алгебра</td>
+                                <td>Русский язык</td>
+                                <td>Литература</td>
+                                <td>Биология</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>    
+            </aside>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <a href="#">Личный кабинет</a>
+            <a href="#">Главная</a>
+            <a href="#">Календарь</a>
+            <a href="#">Расписание</a>
+            <a href="#">База данных</a>
+        </nav>
+    </footer>
+    <script src="scripts/calendar-landing.js"></script>
+</body>
+</html>

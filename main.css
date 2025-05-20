@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+
+/* Шаблонные компоненты */
+button {
+    padding: 10px;
+    background-color: purple;
+    color: aliceblue;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+button:hover {
+    background-color: rgb(151, 42, 151);
+    box-shadow: 5px 5px 20px grey;
+}
+
+/* Шапка и подвал сайта */
+header, footer {
+    background-color: rgb(127, 61, 158);
+    height: auto;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+nav a {
+    color: aliceblue;
+    opacity: 70%;
+    text-decoration: none;
+    transition: .4s;
+    padding: 5px;
+}
+
+nav a:hover {
+    letter-spacing: 1.5px;
+    opacity: 100%;
+}
+
+nav a:nth-child(2) {
+    font-weight: 600;
+    opacity: 100%;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Распределение тела страницы на блоки */
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#sidebar, #main-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Элементы боковой панели */
+#massages-block, #calendar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    min-height: 350px;
+    box-shadow: 5px 5px 25px grey;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.massage {
+    background-color: rgb(202, 127, 236);
+    padding: 15px 10px;
+    border-radius: 8px;
+    margin: 10px 0;
+    width: 100%;
+}
+
+/* Центральные элементы */
+#today-events-block, #shedule-block {
+    box-shadow: 5px 5px 25px grey;
+    padding: 15px;
+    border-radius: 20px;
+    width: 100%;
+}
+
+#today-events-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#today-events-block button {
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Стили для таблицы расписания */
+.header-shedule {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.shedule-table {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.shedule-table table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+}
+
+.shedule-table table td, 
+.shedule-table table th {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.shedule-table .users-lesson {
+    background-color: #e8aeff;
+    font-weight: bold;
+}
+
+/* Календарь */
+#calendar-month-year {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    width: 100%;
+}
+
+.calendar-day {
+    text-align: center;
+    padding: 10px 5px;
+    border-radius: 3px;
+    font-size: 14px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendar-day.empty {
+    visibility: hidden;
+}
+
+.calendar-day-header {
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    font-size: 14px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Занимает всю высоту viewport */
+    margin: 0;
+}
+
+main {
+    flex: 1; /* Занимает всё доступное пространство */
+    padding: 20px;
+}
+
+/* Медиазапросы */
+@media (min-width: 768px) {
+    main {
+        flex-direction: row;
+        padding: 35px;
+    }
+
+    #sidebar {
+        width: 30%;
+    }
+
+    #main-bar {
+        width: 70%;
+    }
+    
+    /* Оптимизация календаря для планшетов */
+    #calendar-container {
+        width: 100%;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .calendar-day {
+        font-size: 14px;
+        padding: 5px;
+    }
+}
+
+/* Адаптация под разные экраны */
+@media (min-width: 768px) {
+    #calendar-container {
+        max-width: 100%;
+        height: auto;
+        padding: 12px;
+    }
+    
+    #calendar-grid {
+        gap: 3px;
+    }
+    
+    .calendar-day, 
+    .calendar-day-header {
+        font-size: 0.7rem;
+        min-height: 30px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .calendar-day, 
+    .calendar-day-header {
+        font-size: 1rem;
+        min-height: 40px;
+    }
+}
